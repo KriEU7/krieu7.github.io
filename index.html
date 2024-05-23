@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristian Tortora - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-zinc-900">
+    <nav class="fixed w-full bg-black p-4 flex justify-between items-center z-50 text-white">
+        <div class="text-2xl font-bold">
+            kristiantortora.com
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="https://www.kristiantortora.com/" class="hover:text-gray-400">HOME</a>
+            <a href="https://www.instagram.com/kritortora/" class="hover:text-gray-400">INSTAGRAM</a>
+        </div>
+        <div class="md:hidden flex items-center">
+            <button id="menu-button" class="focus:outline-none">
+                <span class="material-icons text-white">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black text-white flex flex-col items-center justify-center space-y-4 z-40">
+        <a href="https://www.kristiantortora.com/" class="hover:text-gray-400 text-2xl">HOME</a>
+        <a href="https://www.instagram.com/kritortora/" class="hover:text-gray-400 text-2xl">INSTAGRAM</a>
+    </div>
+
+    <div class="flex flex-col bg-black text-white h-[400px]">
+        <div class="flex-grow"></div>
+        <div class="flex flex-col p-4">
+            <p id="headertext" class="font-medium text-5xl"><span class="text-7xl font-bold">Codice</span> con
+                creatività, <br><span class="text-7xl font-bold">Design</span> con passione.</p>
+        </div>
+    </div>
+    <div class="w-full mb-40">
+        <p id="competenzetesto" class="font-bold text-white text-5xl md:p-24 p-5">Le mie Competenze</p>
+        <div id="competenzecard" class="flex justify-center">
+            <div class="grid md:grid-cols-3 grid-cols-1 md:gap-56 gap-14">
+                <div class="w-[350px] h-[500px] bg-white rounded-2xl">
+                    <div class="flex justify-center pt-8">
+                        <img src="assets/img/terminal.png" width="200px" alt="">
+                    </div>
+                    <div class="flex justify-center mt-5">
+                        <p class="text-2xl font-bold">Linux</p>
+                    </div>
+                    <div class="flex font-normal px-4 justify-center">
+                        <p>
+                            Posseggo competenze avanzate in Linux, con una vasta esperienza nella configurazione,
+                            amministrazione e gestione del sistema operativo. Sono in grado di risolvere problemi
+                            complessi, ottimizzare le prestazioni e automatizzare le attività attraverso scripting e
+                            strumenti personalizzati.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-[350px] h-[500px] bg-white rounded-2xl">
+                    <div class="flex justify-center pt-8">
+                        <img src="assets/img/code.png" width="200px" alt="">
+                    </div>
+                    <div class="flex justify-center mt-5">
+                        <p class="text-2xl font-bold">Coding</p>
+                    </div>
+                    <div class="flex font-normal px-4 justify-center">
+                        <p>
+                            Esperto nel coding con competenze avanzate in Python, JavaScript e altro, creativo
+                            nell'ideazione e nell'implementazione di soluzioni web su misura. Mi adatto agilmente a
+                            nuove sfide e tecnologie emergenti.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-[350px] h-[500px] bg-white rounded-2xl">
+                    <div class="flex justify-center pt-8">
+                        <img src="assets/img/web-design.png" width="200px" alt="">
+                    </div>
+                    <div class="flex justify-center mt-5">
+                        <p class="text-2xl font-bold">Design</p>
+                    </div>
+                    <div class="flex font-normal px-4 justify-center">
+                        <p>
+                            Sono un designer web esperto, specializzato nella creazione di layout accattivanti e
+                            interfacce intuitive per siti web. La mia attenzione ai dettagli e la comprensione delle
+                            esigenze degli utenti guidano la creazione di design che migliorano l'usabilità complessiva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chisono">
+        <p class="font-bold text-white text-5xl md:p-24 p-5">Chi sono?</p>
+        <div class="flex flex-col items-center mb-12">
+            <div class="flex md:flex-row flex-col-reverse items-center md:w-[50%] w-[90%] bg-white p-10 rounded-xl">
+                <div class="flex flex-col font-medium text-black md:order-1 order-2">
+                    <p class="mb-4">
+                        Sono Kristian Tortora, un ragazzo di Napoli, nato e cresciuto a Casoria, con una passione innata
+                        per
+                        l'informatica e tutto ciò che riguarda il mondo della tecnologia. Fin da quando ero bambino, ho
+                        trascorso ore immerso nel digitale, esplorando e sperimentando con computer e dispositivi
+                        elettronici.
+                    </p>
+                    <p class="mb-4">
+                        Attualmente sono uno studente presso l'I.I.S. Don Geremia Piscopo ad Arzano, dove sto seguendo
+                        un
+                        percorso di studi concentrato sull'informatica e le telecomunicazioni. Qui ho avuto
+                        l'opportunità di
+                        approfondire le mie conoscenze e metterle in pratica attraverso vari progetti, specialmente nel
+                        campo della programmazione web.
+                    </p>
+                    <p class="mb-4">
+                        Negli anni ho accumulato un bagaglio di esperienza lavorando su diversi progetti di sviluppo web
+                        e
+                        non solo. Le mie competenze spaziano dall'essere un Web Developer a un esperto in Linux, e mi
+                        piace
+                        cimentarmi anche nel Designing e in altri aspetti del settore informatico.
+                    </p>
+                    <p class="mb-4">
+                        Sono sempre alla ricerca di nuove sfide e opportunità per ampliare le mie conoscenze e
+                        migliorare le
+                        mie abilità. La tecnologia è la mia passione e mi impegno costantemente per restare aggiornato
+                        sulle
+                        ultime tendenze e sviluppi nel campo dell'informatica.
+                    </p>
+                    <p>
+                        Con la mia determinazione e la mia voglia di imparare, sono pronto a affrontare qualsiasi sfida
+                        che
+                        il mondo dell'informatica possa presentarmi, e non vedo l'ora di contribuire con entusiasmo e
+                        creatività a progetti futuri.
+                    </p>
+                </div>
+                <model-viewer class="md:order-2 order-5" src="assets/model/low_poly_person.glb" alt="Crystal"
+                    scale="4 4 4" auto-rotate auto-rotate-delay="0"></model-viewer>
+            </div>
+        </div>
+    </div>
+    <div id="social" class="">
+        <div class="flex">
+            <p class="font-bold text-white text-5xl md:p-24 p-5">I miei Social</p>
+        </div>
+
+        <div class="flex justify-center">
+            <a href="https://instagram.com/kritortora/">
+                <model-viewer class="w-[128px] h-[128px]" src="assets/model/instagram_3d-icon.glb" alt="Crystal"
+                    scale="4 4 4" auto-rotate auto-rotate-delay="0"></model-viewer>
+            </a>
+        </div>
+    </div>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
