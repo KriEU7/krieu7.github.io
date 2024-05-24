@@ -23,10 +23,10 @@
 <body class="bg-zinc-900">
     <nav class="fixed w-full bg-black p-4 flex justify-between items-center z-50 text-white">
         <div class="text-2xl font-bold">
-            kristiantortora.com
+            kristiantortora.it
         </div>
         <div class="hidden md:flex space-x-6">
-            <a href="https://www.kristiantortora.com/" class="hover:text-gray-400">HOME</a>
+            <a href="https://www.kristiantortora.it/" class="hover:text-gray-400">HOME</a>
             <a href="https://www.instagram.com/kritortora/" class="hover:text-gray-400">INSTAGRAM</a>
         </div>
         <div class="md:hidden flex items-center">
@@ -36,8 +36,9 @@
         </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-black text-white flex flex-col items-center justify-center space-y-4 z-40">
-        <a href="https://www.kristiantortora.com/" class="hover:text-gray-400 text-2xl">HOME</a>
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 bg-black text-white flex flex-col items-center justify-center space-y-4 z-40">
+        <a href="https://www.kristiantortora.it/" class="hover:text-gray-400 text-2xl">HOME</a>
         <a href="https://www.instagram.com/kritortora/" class="hover:text-gray-400 text-2xl">INSTAGRAM</a>
     </div>
 
@@ -154,13 +155,23 @@
             <p class="font-bold text-white text-5xl md:p-24 p-5">I miei Social</p>
         </div>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center mb-12">
             <a href="https://instagram.com/kritortora/">
                 <model-viewer class="w-[128px] h-[128px]" src="assets/model/instagram_3d-icon.glb" alt="Crystal"
-                    scale="4 4 4" auto-rotate auto-rotate-delay="0"></model-viewer>
+                    scale="4 4 4" camera-orbit="130deg 80deg" auto-rotate auto-rotate-delay="0"></model-viewer>
             </a>
         </div>
     </div>
+    <footer>
+        <div class="flex w-full h-16 bg-black text-white items-center">
+            <div class="justify-start pl-4">
+                <p class="">© Kristian Tortora - 2024</p>
+            </div>
+            <div class="flex flex-auto justify-end pr-4">
+                <p class="">Creato da Kristian Tortora con ❤️</p>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="assets/js/main.js"></script>
